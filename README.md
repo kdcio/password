@@ -38,7 +38,7 @@ const { isValidPassword } = require('@kdcsoftware/password');
 const login = (username, password) => {
     ...
     const {hash, salt} = getFromDatabase(username);
-    if(isValidPassword(password)) {
+    if(isValidPassword(password, hash, salt)) {
         console.log("Password is correct");
     } else {
         console.log("Password is wrong");
