@@ -9,7 +9,7 @@
     "build": "npm run clean && npm run bundle",
     "lint": "eslint src --ext .js",
     "test": "jest",
-    "watch": "jest --watchAll --runInBand",
+    "watch": "jest --watchAll",
     "coverage": "jest --coverage",
     "bundle": "parcel build src/index.js"
   },
