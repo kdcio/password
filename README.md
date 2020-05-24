@@ -51,11 +51,11 @@ const login = (username, password) => {
 
 Iterations, keylen and digest can be configured by defining environment variables.
 
-- KDC_PW_ITERATIONS
-- KDC_PW_KEYLEN
-- KDC_PW_DIGEST
+- PW_ITERATIONS
+- PW_KEYLEN
+- PW_DIGEST
 
-See below reference for more info.
+See algorithms in [NodeJs crypto](https://nodejs.org/api/crypto.html#crypto_crypto_createhmac_algorithm_key_options) docs for possible values for digest. More info on the link below.
 
 ## Reference
 
