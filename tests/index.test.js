@@ -47,4 +47,13 @@ describe('Password', () => {
     const { hash, salt } = getHashSalt(password);
     expect(isValidPassword(password, salt, hash)).toBe(true);
   });
+
+  it('should use default if env vars are invalid', () => {
+    process.env.PW_ITERATIONS = 'xyz';
+    process.env.PW_KEYLEN = 'abc';
+    process.env.PW_DIGEST = 'sha256';
+    const password = 'hello world';
+    const { hash, salt } = getHashSalt(password);
+    expect(isValidPassword(password, salt, hash)).toBe(true);
+  });
 });

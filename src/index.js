@@ -6,7 +6,7 @@ const createHash = (pw, salt) => {
   const keylen = PW_KEYLEN ? parseInt(PW_KEYLEN, 10) : 64;
   const digest = PW_DIGEST || `sha512`;
   return crypto
-    .pbkdf2Sync(pw, salt, iterations, keylen, digest)
+    .pbkdf2Sync(pw, salt, iterations || 1000, keylen || 64, digest)
     .toString(`hex`);
 };
 
