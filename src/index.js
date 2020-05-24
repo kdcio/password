@@ -1,16 +1,12 @@
 import crypto from 'crypto';
 
-const { KDC_PW_ITERATIONS, KDC_PW_KEYLEN, KDC_PW_DIGEST } = process.env;
-
 const createHash = (pw, salt) => {
+  const { PW_ITERATIONS, PW_KEYLEN, PW_DIGEST } = process.env;
+  const iterations = PW_ITERATIONS ? parseInt(PW_ITERATIONS, 10) : 1000;
+  const keylen = PW_KEYLEN ? parseInt(PW_KEYLEN, 10) : 64;
+  const digest = PW_DIGEST || `sha512`;
   return crypto
-    .pbkdf2Sync(
-      pw,
-      salt,
-      KDC_PW_ITERATIONS || 1000,
-      KDC_PW_KEYLEN || 64,
-      KDC_PW_DIGEST || `sha512`
-    )
+    .pbkdf2Sync(pw, salt, iterations, keylen, digest)
     .toString(`hex`);
 };
 

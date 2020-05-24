@@ -38,4 +38,13 @@ describe('Password', () => {
       expect(isValidPassword(inputPw, salt, hash)).toBe(expected);
     });
   });
+
+  it('should generate hash from environment variables', () => {
+    process.env.PW_ITERATIONS = 999;
+    process.env.PW_KEYLEN = 32;
+    process.env.PW_DIGEST = 'sha256';
+    const password = 'hello world';
+    const { hash, salt } = getHashSalt(password);
+    expect(isValidPassword(password, salt, hash)).toBe(true);
+  });
 });
