@@ -5,6 +5,8 @@
 [![codecov](https://img.shields.io/codecov/c/github/kdcsoftware/password?style=for-the-badge)](https://codecov.io/gh/kdcsoftware/password)
 [![size](https://img.shields.io/bundlephobia/min/@kdcsoftware/password?style=for-the-badge)](https://bundlephobia.com/result?p=@kdcsoftware/password)
 [![license](https://img.shields.io/github/license/kdcsoftware/password?style=for-the-badge)](https://github.com/kdcsoftware/password/blob/master/LICENSE)
+![Maintainability](https://img.shields.io/codeclimate/maintainability/kdcsoftware/password?style=for-the-badge) ![Code Issues](https://img.shields.io/codeclimate/issues/kdcsoftware/password?style=for-the-badge)
+![Technical Debt](https://img.shields.io/codeclimate/tech-debt/kdcsoftware/password?style=for-the-badge)
 
 This package will generate hash and salt given a password. It also has a function to validate a password input.
 
