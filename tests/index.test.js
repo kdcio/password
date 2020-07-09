@@ -1,4 +1,4 @@
-import { getHashSalt, isValidPassword } from '../src';
+import { getHashSalt, isValidPassword, randomString } from '../src';
 
 describe('Password', () => {
   [
@@ -55,5 +55,10 @@ describe('Password', () => {
     const password = 'hello world';
     const { hash, salt } = getHashSalt(password);
     expect(isValidPassword(password, salt, hash)).toBe(true);
+  });
+
+  it('should generate random string', () => {
+    expect(randomString(4)).toHaveLength(8);
+    expect(randomString(16)).toHaveLength(32);
   });
 });

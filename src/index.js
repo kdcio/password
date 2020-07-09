@@ -15,9 +15,11 @@ export const isValidPassword = (inputPassword, salt, hash) => {
   return inputHash === hash;
 };
 
+export const randomString = (len) => crypto.randomBytes(len).toString('hex');
+
 export const getHashSalt = (pw) => {
   // Creating a unique salt for a particular user
-  const salt = crypto.randomBytes(16).toString('hex');
+  const salt = randomString(16);
 
   // Hashing user's salt and password with 1000 iterations,
   // 64 length and sha512 digest
