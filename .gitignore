@@ -3,3 +3,4 @@ coverage/
 lib/
 .serverless
 .parcel-cache
+test-report.xml
