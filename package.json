@@ -1,5 +1,5 @@
 {
-  "name": "@kdcsoftware/password",
+  "name": "@kdcio/password",
   "version": "0.3.0",
   "description": "",
   "main": "lib/index.js",
@@ -14,12 +14,13 @@
     "bundle": "parcel build src/index.js"
   },
   "keywords": [
-    "kdcsoftware",
+    "kdc",
+    "kdcio",
     "password"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kdcsoftware/password.git"
+    "url": "git+https://github.com/kdcio/password.git"
   },
   "author": {
     "name": "Ian Dela Cruz",
@@ -28,9 +29,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kdcsoftware/password/issues"
+    "url": "https://github.com/kdcio/password/issues"
   },
-  "homepage": "https://github.com/kdcsoftware/password#readme",
+  "homepage": "https://github.com/kdcio/password#readme",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",

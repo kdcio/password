@@ -1,20 +1,13 @@
 # Password Hash and Salt Generator
 
-[![ver](https://img.shields.io/npm/v/@kdcsoftware/password?style=for-the-badge)](https://www.npmjs.com/package/@kdcsoftware/password)
-[![build](https://img.shields.io/github/workflow/status/kdcsoftware/password/build?style=for-the-badge)](https://github.com/kdcsoftware/password/actions?query=workflow%3Abuild)
-[![codecov](https://img.shields.io/codecov/c/github/kdcsoftware/password?style=for-the-badge)](https://codecov.io/gh/kdcsoftware/password)
-[![size](https://img.shields.io/bundlephobia/min/@kdcsoftware/password?style=for-the-badge)](https://bundlephobia.com/result?p=@kdcsoftware/password)
-[![license](https://img.shields.io/github/license/kdcsoftware/password?style=for-the-badge)](https://github.com/kdcsoftware/password/blob/master/LICENSE)
-
-[![Maintainability](https://img.shields.io/codeclimate/maintainability/kdcsoftware/password?style=for-the-badge)](https://api.codeclimate.com/v1/badges/1b3fb72854c0f527cd26/maintainability) [![Code Issues](https://img.shields.io/codeclimate/issues/kdcsoftware/password?style=for-the-badge)](https://codeclimate.com/github/kdcsoftware/password/issues)
-[![Technical Debt](https://img.shields.io/codeclimate/tech-debt/kdcsoftware/password?style=for-the-badge)](https://codeclimate.com/github/kdcsoftware/password/trends/technical_debt)
-
 This package will generate hash and salt given a password. It also has a function to validate a password input.
+
+[![ver](https://img.shields.io/npm/v/@kdcio/password)](https://www.npmjs.com/package/@kdcio/password) [![build](https://img.shields.io/github/workflow/status/kdcio/password/build)](https://github.com/kdcio/password/actions?query=workflow%3Abuild) [![codecov](https://img.shields.io/codecov/c/github/kdcio/password)](https://codecov.io/gh/kdcio/password) [![size](https://img.shields.io/bundlephobia/min/@kdcio/password)](https://bundlephobia.com/result?p=@kdcio/password) [![Known Vulnerabilities](https://snyk.io/test/github/kdcio/password/badge.svg?targetFile=package.json)](https://snyk.io/test/github/kdcio/password?targetFile=package.json) [![license](https://img.shields.io/github/license/kdcio/password)](https://github.com/kdcio/password/blob/master/LICENSE)
 
 ## Install
 
 ```terminal
-npm i @kdcsoftware/password
+npm i @kdcio/password
 ```
 
 ## Usage
@@ -22,7 +15,7 @@ npm i @kdcsoftware/password
 ### On user registration
 
 ```javascript
-const { getHashSalt } = require('@kdcsoftware/password');
+const { getHashSalt } = require('@kdcio/password');
 
 const register = (password) => {
     ...
@@ -36,7 +29,7 @@ Store the hash and salt in your database.
 ### On user login
 
 ```javascript
-const { isValidPassword } = require('@kdcsoftware/password');
+const { isValidPassword } = require('@kdcio/password');
 
 const login = (username, password) => {
     ...
